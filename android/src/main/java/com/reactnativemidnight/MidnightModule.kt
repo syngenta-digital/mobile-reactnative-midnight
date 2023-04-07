@@ -46,7 +46,7 @@ class MidnightModule(private val reactContext: ReactApplicationContext) : ReactC
         date = currentDate
         sendDayChangedEvent()
       }
-      if(!isHourUpdated(hourIn24Format, currentHourIn24Format)) {
+      if(isHourUpdated(hourIn24Format, currentHourIn24Format)) {
         hourIn24Format = currentHourIn24Format
         sendHourChangedEvent()
       }
